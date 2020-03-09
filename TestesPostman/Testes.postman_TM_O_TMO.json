@@ -1,0 +1,878 @@
+{
+	"id": "2dcb3fc4-2df7-481f-bebd-50d8de09a50b",
+	"name": "Testes",
+	"allTests": [],
+	"timestamp": "2019-10-27T13:22:20.511Z",
+	"collection_id": "e4b29845-a1a1-4113-9fdc-beedd5376b3e",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "e4b29845-a1a1-4113-9fdc-beedd5376b3e",
+		"name": "Testes",
+		"order": [
+			"98eb0c1f-bc2f-46f7-b8f2-ee3218004f22",
+			"e07a335c-b9db-4b28-9962-86b652c6216b",
+			"b8c788c0-7dee-4854-8ca2-4f4b599b78f5",
+			"5366657f-530c-4010-8a48-c289dc3bcdf3",
+			"5d9bea4c-09bf-4c30-ae4e-40fd4a24b851",
+			"d37f7e6c-25ea-4f9d-a6fb-465d194b7b94",
+			"10acd627-94cd-4e8f-812f-d3338c1c4ece",
+			"2463ed3a-f21e-4761-819d-97d216822d4a",
+			"2c101c98-7ae6-42ad-aa3b-c2ee47b59b71",
+			"28995deb-7f65-4209-967f-4ab794897f67",
+			"c7c382b9-c158-47c9-8bba-cefdb367b4b4",
+			"82e7bf31-76e3-4d48-adbf-cc5497f18c26",
+			"a6f43085-f116-478f-a548-fd2bf2039acd",
+			"97e3d4c2-dbef-42dc-b53d-bb5773e3452a",
+			"0416bb6a-b80e-4985-a93f-1aa927b3ca0f"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "GetOperacaoFail",
+			"id": "98eb0c1f-bc2f-46f7-b8f2-ee3218004f22",
+			"url": "https://localhost:5001/api/operacao/17",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"status code é 404": true
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"status code é 404": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "CriarOperacao",
+			"id": "e07a335c-b9db-4b28-9962-86b652c6216b",
+			"url": "https://localhost:5001/api/operacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 201": true
+			},
+			"testPassFailCounts": {
+				"status code é 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"status code é 201": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetOperacaoId",
+			"id": "b8c788c0-7dee-4854-8ca2-4f4b599b78f5",
+			"url": "https://localhost:5001/api/operacao/17",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true,
+				"description is Furar com broca de 5mm": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"description is Furar com broca de 5mm": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"status code é 200": true,
+					"description is Furar com broca de 5mm": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteOperacao",
+			"id": "5366657f-530c-4010-8a48-c289dc3bcdf3",
+			"url": "https://localhost:5001/api/operacao/17",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{
+					"status code é 200": true
+				}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetOperacaoFail",
+			"id": "5d9bea4c-09bf-4c30-ae4e-40fd4a24b851",
+			"url": "https://localhost:5001/api/operacao/17",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"status code é 404": true
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"status code é 404": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetTipoMaquinaFail",
+			"id": "d37f7e6c-25ea-4f9d-a6fb-465d194b7b94",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"status code é 404": true
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"status code é 404": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "CriarTipoMaquina",
+			"id": "10acd627-94cd-4e8f-812f-d3338c1c4ece",
+			"url": "https://localhost:5001/api/tipoMaquina",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 201": true
+			},
+			"testPassFailCounts": {
+				"status code é 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"status code é 201": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetTipoMaquinaId",
+			"id": "2463ed3a-f21e-4761-819d-97d216822d4a",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true,
+				"description is Tipo Exemplo": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"description is Tipo Exemplo": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"status code é 200": true,
+					"description is Tipo Exemplo": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteTipoMaquina",
+			"id": "2c101c98-7ae6-42ad-aa3b-c2ee47b59b71",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"10"
+			],
+			"allTests": [
+				{
+					"status code é 200": true
+				}
+			],
+			"time": "10",
+			"totalRequestTime": "10",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetTipoMaquinaFail",
+			"id": "28995deb-7f65-4209-967f-4ab794897f67",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"status code é 404": true
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"status code é 404": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "CriarTipoMaquinaOperacao",
+			"id": "c7c382b9-c158-47c9-8bba-cefdb367b4b4",
+			"url": "https://localhost:5001/api/tiposMaquinaOperacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 201": true
+			},
+			"testPassFailCounts": {
+				"status code é 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"status code é 201": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteTipoMaquinaOperacao",
+			"id": "82e7bf31-76e3-4d48-adbf-cc5497f18c26",
+			"url": "https://localhost:5001/api/tiposMaquinaOperacao/12",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"status code é 200": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetOperacoes",
+			"id": "a6f43085-f116-478f-a548-fd2bf2039acd",
+			"url": "https://localhost:5001/api/operacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"status code é 200": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetTipoMaquina",
+			"id": "97e3d4c2-dbef-42dc-b53d-bb5773e3452a",
+			"url": "https://localhost:5001/api/tipoMaquina",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"status code é 200": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetTipoMaquinaOperacao",
+			"id": "0416bb6a-b80e-4985-a93f-1aa927b3ca0f",
+			"url": "https://localhost:5001/api/tiposMaquinaOperacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code é 200": true
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"status code é 200": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 17,
+	"totalFail": 0,
+	"totalTime": 101,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "GetOperacaoFail",
+			"id": "98eb0c1f-bc2f-46f7-b8f2-ee3218004f22",
+			"url": "https://localhost:5001/api/operacao/17",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CriarOperacao",
+			"id": "e07a335c-b9db-4b28-9962-86b652c6216b",
+			"url": "https://localhost:5001/api/operacao",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetOperacaoId",
+			"id": "b8c788c0-7dee-4854-8ca2-4f4b599b78f5",
+			"url": "https://localhost:5001/api/operacao/17",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"description is Furar com broca de 5mm": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeleteOperacao",
+			"id": "5366657f-530c-4010-8a48-c289dc3bcdf3",
+			"url": "https://localhost:5001/api/operacao/17",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetOperacaoFail",
+			"id": "5d9bea4c-09bf-4c30-ae4e-40fd4a24b851",
+			"url": "https://localhost:5001/api/operacao/17",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetTipoMaquinaFail",
+			"id": "d37f7e6c-25ea-4f9d-a6fb-465d194b7b94",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CriarTipoMaquina",
+			"id": "10acd627-94cd-4e8f-812f-d3338c1c4ece",
+			"url": "https://localhost:5001/api/tipoMaquina",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetTipoMaquinaId",
+			"id": "2463ed3a-f21e-4761-819d-97d216822d4a",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"description is Tipo Exemplo": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeleteTipoMaquina",
+			"id": "2c101c98-7ae6-42ad-aa3b-c2ee47b59b71",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetTipoMaquinaFail",
+			"id": "28995deb-7f65-4209-967f-4ab794897f67",
+			"url": "https://localhost:5001/api/tipoMaquina/14",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CriarTipoMaquinaOperacao",
+			"id": "c7c382b9-c158-47c9-8bba-cefdb367b4b4",
+			"url": "https://localhost:5001/api/tiposMaquinaOperacao",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeleteTipoMaquinaOperacao",
+			"id": "82e7bf31-76e3-4d48-adbf-cc5497f18c26",
+			"url": "https://localhost:5001/api/tiposMaquinaOperacao/12",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetOperacoes",
+			"id": "a6f43085-f116-478f-a548-fd2bf2039acd",
+			"url": "https://localhost:5001/api/operacao",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetTipoMaquina",
+			"id": "97e3d4c2-dbef-42dc-b53d-bb5773e3452a",
+			"url": "https://localhost:5001/api/tipoMaquina",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetTipoMaquinaOperacao",
+			"id": "0416bb6a-b80e-4985-a93f-1aa927b3ca0f",
+			"url": "https://localhost:5001/api/tiposMaquinaOperacao",
+			"time": "2019-10-27T13:22:20.511Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code é 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

@@ -1,0 +1,7 @@
+DROP TABLE dbo.Operacoes;
+DROP TABLE dbo.Maquinas;
+DROP TABLE dbo.LinhasProducao;
+DROP TABLE dbo.LinhasProducaoMaquina;
+DROP TABLE dbo.__EFMigrationsHistory;
+DROP TABLE dbo.TipoMaquinas_Operacao;
+DROP TABLE dbo.TipoMaquinas;

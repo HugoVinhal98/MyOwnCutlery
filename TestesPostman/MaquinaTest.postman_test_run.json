@@ -1,0 +1,344 @@
+{
+	"id": "6790181c-cbe7-478b-802d-32daa5d8a7ce",
+	"name": "MaquinaTest",
+	"allTests": [],
+	"timestamp": "2019-10-27T18:47:02.195Z",
+	"collection_id": "424801ee-b33e-48a2-b633-2c4670d1b9d1",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "424801ee-b33e-48a2-b633-2c4670d1b9d1",
+		"name": "MaquinaTest",
+		"order": [
+			"d96860d4-a118-436a-be2e-6e5706be2ead",
+			"8abfabe1-be26-4efe-b79a-ec9bcfa0cbb1",
+			"fa2e443c-6fa4-4466-8af6-b9d58a528779",
+			"8101ad8f-3ed4-4c34-bc98-08405fde649c",
+			"32949b50-d84d-47c8-9ef6-37042f25848d"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "variable_key",
+			"value": "variable_value",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "GetMaquina",
+			"id": "d96860d4-a118-436a-be2e-6e5706be2ead",
+			"url": "https://localhost:5001/api/Maquina/1000000",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Successful GET request": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "PostMaquina",
+			"id": "8abfabe1-be26-4efe-b79a-ec9bcfa0cbb1",
+			"url": "https://localhost:5001/api/Maquina",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"18"
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			],
+			"time": "18",
+			"totalRequestTime": "18",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetMaquinaCerto",
+			"id": "fa2e443c-6fa4-4466-8af6-b9d58a528779",
+			"url": "https://localhost:5001/api/Maquina/3",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful GET request": true,
+				"Body had descricao": true,
+				"Body had marca": true,
+				"Body had modelo": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had descricao": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had marca": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had modelo": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true,
+					"Body had descricao": true,
+					"Body had marca": true,
+					"Body had modelo": true
+				}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteMaquina",
+			"id": "8101ad8f-3ed4-4c34-bc98-08405fde649c",
+			"url": "https://localhost:5001/api/Maquina/11",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful GET request": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true
+				}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetDeletedMaquina",
+			"id": "32949b50-d84d-47c8-9ef6-37042f25848d",
+			"url": "https://localhost:5001/api/Maquina/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Successful GET request": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 8,
+	"totalFail": 0,
+	"totalTime": 51,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "GetMaquina",
+			"id": "d96860d4-a118-436a-be2e-6e5706be2ead",
+			"url": "https://localhost:5001/api/Maquina/1000000",
+			"time": "2019-10-27T18:47:02.195Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PostMaquina",
+			"id": "8abfabe1-be26-4efe-b79a-ec9bcfa0cbb1",
+			"url": "https://localhost:5001/api/Maquina",
+			"time": "2019-10-27T18:47:02.195Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetMaquinaCerto",
+			"id": "fa2e443c-6fa4-4466-8af6-b9d58a528779",
+			"url": "https://localhost:5001/api/Maquina/3",
+			"time": "2019-10-27T18:47:02.195Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had descricao": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had marca": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had modelo": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeleteMaquina",
+			"id": "8101ad8f-3ed4-4c34-bc98-08405fde649c",
+			"url": "https://localhost:5001/api/Maquina/11",
+			"time": "2019-10-27T18:47:02.195Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetDeletedMaquina",
+			"id": "32949b50-d84d-47c8-9ef6-37042f25848d",
+			"url": "https://localhost:5001/api/Maquina/1",
+			"time": "2019-10-27T18:47:02.195Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

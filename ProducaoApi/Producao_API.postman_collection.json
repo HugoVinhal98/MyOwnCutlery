@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "3a0469c1-f784-4788-8d2c-fa8e035e2454",
+		"name": "Producao_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar todos os planos de fabrico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/PlanoFabrico",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"PlanoFabrico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar um plano de fabrico por nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/PlanoFabrico/PlanoFabrico1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"PlanoFabrico",
+						"PlanoFabrico1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Produto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar produto pelo seu nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Produto/ProdutoBase",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Produto",
+						"ProdutoBase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar produto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": {\r\n        \"nome\": \"Colher\"\r\n    },\r\n    \"descricao\": {\r\n        \"descricao\": \"Colher dourada\"\r\n    },\r\n    \"planoFabrico\": {\r\n        \"nome\": \"PlanoFabrico1\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Produto/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Produto",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

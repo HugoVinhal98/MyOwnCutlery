@@ -1,0 +1,23 @@
+{
+  "name": "gestaoencomendasapi",
+  "version": "1.0.0",
+  "description": "API Gestao Encomendas",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "crypto": "^1.0.1",
+    "cryptr": "^6.0.1",
+    "express": "^4.17.1",
+    "mocha": "^6.2.2",
+    "mockgoose": "^8.0.4",
+    "mongoose": "^5.8.0",
+    "morgan": "^1.9.1",
+    "vue-dynamic-dropdown": "^1.0.12"
+  }
+}

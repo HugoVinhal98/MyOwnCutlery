@@ -1,0 +1,703 @@
+{
+	"id": "5bd4f255-1359-4b12-bdbf-bdcfb32897be",
+	"name": "EncomendaTest",
+	"allTests": [],
+	"timestamp": "2019-12-08T19:26:27.121Z",
+	"collection_id": "1ae4b24b-72e0-48fc-be7e-21d0df3f6657",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "1ae4b24b-72e0-48fc-be7e-21d0df3f6657",
+		"name": "EncomendaTest",
+		"order": [
+			"22cece0a-b44d-4c09-8bf0-a1a6b968542a",
+			"930bedef-1ba8-4bf4-ac42-03a8ce8cecd7",
+			"05eb50da-0dce-49e7-b1fa-6a77bd837d89",
+			"b257a8ea-d93e-409c-a332-fe11ab104237",
+			"34734e9a-30c1-4578-9be5-938c7f0d14e2",
+			"d061f635-c9d0-44f2-a380-ffa17487fe69",
+			"1671bfce-9964-49a4-9d2e-6dc5c39e7ba0",
+			"ccb3fcf5-445f-485a-88bd-52835e4fc7d3"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "GetEncomendas",
+			"id": "22cece0a-b44d-4c09-8bf0-a1a6b968542a",
+			"url": "http://localhost:3000/api/encomendas",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful GET request": true,
+				"Body had nrEncomenda": true,
+				"Body had estado": true,
+				"Body had clienteEmail": true,
+				"Body had quantidade": true,
+				"Body had produto": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nrEncomenda": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had estado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had clienteEmail": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had quantidade": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had produto": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true,
+					"Body had nrEncomenda": true,
+					"Body had estado": true,
+					"Body had clienteEmail": true,
+					"Body had quantidade": true,
+					"Body had produto": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "PostEncomenda",
+			"id": "930bedef-1ba8-4bf4-ac42-03a8ce8cecd7",
+			"url": "http://localhost:3000/api/encomendas",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Body had nrEncomenda": true,
+				"Body had estado": true,
+				"Body had quantidade": true,
+				"Body had produto": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nrEncomenda": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had estado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had quantidade": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had produto": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Body had nrEncomenda": true,
+					"Body had estado": true,
+					"Body had quantidade": true,
+					"Body had produto": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "AlterarEncomenda",
+			"id": "05eb50da-0dce-49e7-b1fa-6a77bd837d89",
+			"url": "http://localhost:3000/api/encomendas/alterarEncomenda",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful GET request": true,
+				"Body had message": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true,
+					"Body had message": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "CancelarEncomenda",
+			"id": "b257a8ea-d93e-409c-a332-fe11ab104237",
+			"url": "http://localhost:3000/api/encomendas/cancelarEncomenda",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful GET request": true,
+				"Body had message": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true,
+					"Body had message": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetClientes",
+			"id": "34734e9a-30c1-4578-9be5-938c7f0d14e2",
+			"url": "http://localhost:3000/api/clientes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful GET request": true,
+				"Body had nome": true,
+				"Body had morada": true,
+				"Body had telemovel": true,
+				"Body had email": true,
+				"Body had password": true
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nome": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had morada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had telemovel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1978"
+			],
+			"allTests": [
+				{
+					"Successful GET request": true,
+					"Body had nome": true,
+					"Body had morada": true,
+					"Body had telemovel": true,
+					"Body had email": true,
+					"Body had password": true
+				}
+			],
+			"time": "1978",
+			"totalRequestTime": "1978",
+			"iterationResults": {}
+		},
+		{
+			"name": "PostCliente",
+			"id": "d061f635-c9d0-44f2-a380-ffa17487fe69",
+			"url": "http://localhost:3000/api/clientes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Body had nome": true,
+				"Body had morada": true,
+				"Body had telemovel": true,
+				"Body had email": true,
+				"Body had password": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nome": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had morada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had telemovel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"109"
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Body had nome": true,
+					"Body had morada": true,
+					"Body had telemovel": true,
+					"Body had email": true,
+					"Body had password": true
+				}
+			],
+			"time": "109",
+			"totalRequestTime": "109",
+			"iterationResults": {}
+		},
+		{
+			"name": "AlterarCliente",
+			"id": "1671bfce-9964-49a4-9d2e-6dc5c39e7ba0",
+			"url": "http://localhost:3000/api/clientes/alterarCliente",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Body had message": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"113"
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Body had message": true
+				}
+			],
+			"time": "113",
+			"totalRequestTime": "113",
+			"iterationResults": {}
+		},
+		{
+			"name": "AlterarClienteAdmin",
+			"id": "ccb3fcf5-445f-485a-88bd-52835e4fc7d3",
+			"url": "http://localhost:3000/api/clientes/alterarClienteAdmin",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Body had message": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Body had message": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 31,
+	"totalFail": 0,
+	"totalTime": 2245,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "GetEncomendas",
+			"id": "22cece0a-b44d-4c09-8bf0-a1a6b968542a",
+			"url": "http://localhost:3000/api/encomendas",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nrEncomenda": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had estado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had clienteEmail": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had quantidade": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had produto": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PostEncomenda",
+			"id": "930bedef-1ba8-4bf4-ac42-03a8ce8cecd7",
+			"url": "http://localhost:3000/api/encomendas",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nrEncomenda": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had estado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had quantidade": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had produto": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "AlterarEncomenda",
+			"id": "05eb50da-0dce-49e7-b1fa-6a77bd837d89",
+			"url": "http://localhost:3000/api/encomendas/alterarEncomenda",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CancelarEncomenda",
+			"id": "b257a8ea-d93e-409c-a332-fe11ab104237",
+			"url": "http://localhost:3000/api/encomendas/cancelarEncomenda",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetClientes",
+			"id": "34734e9a-30c1-4578-9be5-938c7f0d14e2",
+			"url": "http://localhost:3000/api/clientes",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful GET request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nome": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had morada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had telemovel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had password": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PostCliente",
+			"id": "d061f635-c9d0-44f2-a380-ffa17487fe69",
+			"url": "http://localhost:3000/api/clientes",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had nome": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had morada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had telemovel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had password": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "AlterarCliente",
+			"id": "1671bfce-9964-49a4-9d2e-6dc5c39e7ba0",
+			"url": "http://localhost:3000/api/clientes/alterarCliente",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "AlterarClienteAdmin",
+			"id": "ccb3fcf5-445f-485a-88bd-52835e4fc7d3",
+			"url": "http://localhost:3000/api/clientes/alterarClienteAdmin",
+			"time": "2019-12-08T19:26:27.121Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body had message": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

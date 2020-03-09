@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "7ea1b284-fab0-4129-a55f-8b898d360e79",
+		"name": "FabricaAPI_v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Associar máquinas a LP",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"descricao\": \"maquina1\",\r\n        \"posicao\": 1\r\n    },\r\n    {\r\n        \"descricao\": \"maquina3\",\r\n        \"posicao\": 2\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/linhaproducaomaquina/Linha 1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"linhaproducaomaquina",
+						"Linha 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar TM de Máquina",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"descricao\": \"Tipo 4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/maquina/alterarTM/maquina1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"maquina",
+						"alterarTM",
+						"maquina1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Associar operações a TM",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t\t\"nomeOperacao\": \"Operacao 1\"\r\n\t},\r\n\t{\r\n\t\t\"nomeOperacao\": \"Operacao 2\"\r\n\t}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/tiposmaquinaoperacao/Tipo 3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tiposmaquinaoperacao",
+						"Tipo 3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Linha de Produção",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": {\r\n        \"descricao\": \"Linha 3\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/linhaproducao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"linhaproducao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Operação",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nomeTipoOp\": \"Furar com broca\",\r\n\t\"nomeOperacao\": \"Operacao 5\", \r\n    \"duracao\": {\r\n        \"minutos\": 4,\r\n        \"segundos\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/operacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"operacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Tipo de Máquina",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": {\r\n        \"descricao\": \"Tipo 5\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/tipomaquina",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tipomaquina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Máquina",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"maquina1000\",\r\n    \"marca\": \"marcaD\",\r\n    \"modelo\": \"modeloK\",\r\n    \"descTipoMaquina\": \"Tipo 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5003/api/maquina",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"maquina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Tipo de Máquina",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/tipomaquina/Tipo 1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tipomaquina",
+						"Tipo 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Máquina",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/maquina/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"maquina",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar máquinas de um dado TM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/maquina/maquinasDeTipoMaquina/Tipo 2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"maquina",
+						"maquinasDeTipoMaquina",
+						"Tipo 2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os tipos de operações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/tipooperacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tipooperacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todas as operações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/operacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"operacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todas as LPs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/linhaproducao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"linhaproducao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar operação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/operacao/Operacao 1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"operacao",
+						"Operacao 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os tipos de máquina",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/tipomaquina",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tipomaquina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todas as maquinas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/maquina",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"maquina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todas as OP/TM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/tiposmaquinaoperacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tiposmaquinaoperacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar operacoes de tipo de maquina",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/tiposmaquinaoperacao/Tipo 3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"tiposmaquinaoperacao",
+						"Tipo 3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todas as LPs c/Operacoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5003/api/linhaproducaomaquina",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"linhaproducaomaquina"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

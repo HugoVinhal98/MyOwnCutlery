@@ -1,0 +1,480 @@
+<html>
+
+<head>
+    <title>Fabrica</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ui {
+            position: absolute;
+        }
+
+        a {
+            top: 0;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 10px;
+            color: black;
+        }
+
+        a:hover {
+            border: black solid 1px;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/DragControls.js"></script>
+    <script src="functions/criarObj.js"></script>
+    <script src="functions/skyBox.js"></script>
+    <script src="functions/chaoParedes.js"></script>
+    <script src="functions/luzes.js"></script>
+    <script src="functions/gui.js"></script>
+    <script src="functions/bddad.js"></script>
+    <script src="functions/movimentos.js"></script>
+    <a class="ui" href="../src/App.vue">HOME</a>
+    <script>
+
+        // var startButton = document.getElementById( 'startButton' );
+        // 	startButton.addEventListener( 'click', init );  
+
+        var controller = new function () {
+
+            this.CriarLinhasProducao = criarLinhasProducao;
+            this.CriarMaquinas = criarMaquinas;
+        };
+
+        var controller1 = new function () {
+
+            this.EnviarEncomenda = enviarEncomenda;
+        };
+
+        var controller2 = new function () {
+            this.Apagar = apagarTudo;
+        };
+
+        var controller3 = new function(){
+            this.LigarDesligar = luzesDesligadas;
+        }
+
+        var mouse = { x: 0, y: 0 };
+        var raycaster;
+        var INTERSECTED;
+        var boolean = true;
+        var distanciaLinhas = 0;
+        const mixers = [];
+        var objectsGLTF = [];
+        var maquinasGLTF = [];
+        var facasGLTF = [];
+        var colherGLTF = [];
+        var nrMaquinas, nrLinhas, linhasMaquinas2;
+        var linhasMaquinas = [];
+
+        var eixoy;
+        var scalez;
+
+        var eixoyfaca;
+        var scalezfaca;
+
+        var eixoycolher;
+        var scalezcolher;
+
+        var n = 0;
+        var nGates = 4;
+
+        //lights
+        var lights = [];
+
+        //movimentos
+        var booleanTalher = false;
+        var booleanAndarGarfo = false;
+        var booleanAndarFacas = false;
+        var booleanCamiao = false;
+        var booleanAndarColher = false;
+        
+
+        //boolean
+        var booleanLinhas = false;
+        var booleanMaquinas = false;
+
+        //drag and drop coordinates
+        var auxx;
+        var auxy;
+        var auxz;
+        var eventx;
+        var eventy;
+        var eventz;
+
+        for (var i = 0; i < 6; i++) {
+            linhasMaquinas[i] = [];
+            for (var j = 0; j < 6; j++) {
+                linhasMaquinas[i][j] = undefined;
+            }
+        }
+
+
+        var flag = false;
+        var nLinhas = 0;
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(
+            75,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            10000
+        );
+
+        raycaster = new THREE.Raycaster();
+
+        clock = new THREE.Clock();
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        document.body.appendChild(renderer.domElement);
+
+        // when resizes the window it fits
+        window.addEventListener('resize', function () {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+        });
+
+        // controls 
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        // create the shape
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+
+        // create the material, colour or image texture
+        var material = new THREE.MeshBasicMaterial({
+            color: 0xFFFFFF, wireframe: false
+        });
+
+        // when the mouse moves, call the given function
+        document.addEventListener('mousemove', onDocumentMouseMove, false);
+
+        // create a canvas element
+        canvas1 = document.createElement('canvas');
+        context1 = canvas1.getContext('2d');
+        context1.font = "Bold 20px Arial";
+        context1.fillStyle = "rgba(0,0,0,0.95)";
+        context1.fillText('Ouriço!', 0, 0);
+
+        // canvas contents will be used for a texture
+        texture1 = new THREE.Texture(canvas1)
+        texture1.needsUpdate = true;
+
+        ////////////////////////////////////////
+
+        var spriteMaterial = new THREE.SpriteMaterial({ map: texture1, useScreenCoordinates: true, alignment: THREE.SpriteMaterial.topLeft });
+
+        sprite1 = new THREE.Sprite(spriteMaterial);
+        sprite1.scale.set(200, 200, 1.0);
+        sprite1.position.set(-100, 150, -100);
+        scene.add(sprite1);
+
+        //audio
+        var audioLoader = new THREE.AudioLoader();
+
+        var listener = new THREE.AudioListener();
+        camera.add(listener);
+
+        //instanciar audio
+        var truckInitialSound = new THREE.Audio(listener);
+        var truckSound = new THREE.Audio(listener);
+
+
+
+
+
+        //skyBox.js
+        skyBox();
+
+        //chaoParedes.js
+        chaoParedes();
+
+        //criarObj.js
+        criarTexto();
+
+        //criarObj.js
+        criarOutros();
+
+        //luzes.js
+        luzes();
+
+        //gui.js
+        gui();
+        // camera posicao
+        camera.position.z = 250;
+        camera.position.y = 30;
+
+        //drag and drop
+        var dragControls = new THREE.DragControls(maquinasGLTF, camera, renderer.domElement);
+
+        dragControls.addEventListener('dragstart', function (event) {
+            auxx = event.object.position.x;
+            auxy = event.object.position.y;
+            auxz = event.object.position.z;
+            console.log("CONSOLE X:");
+            console.log(auxx);
+            console.log("CONSOLE Y:");
+            console.log(auxy);
+            console.log("CONSOLE Z:");
+            console.log(auxz);
+            event.object.material.emissive.set(0x29a329);
+
+
+        });
+
+        dragControls.addEventListener('drag', function (event) {
+            event.object.position.y = -5; // This will prevent moving z axis, but will be on 0 line. change this to your object position of z axis.
+            eventx = event.object.position.x;
+            eventy = event.object.position.y;
+            eventz = event.object.position.z;
+            controls.enabled = false;
+
+            if (event.object.position.x < -2000 || event.object.position.x > 5000 || event.object.position.z < -3500 || event.object.position.z > 5500) {
+                event.object.material.emissive.set(0xff0000);
+            } else {
+                event.object.material.emissive.set(0x29a329);
+            }
+        })
+
+        dragControls.addEventListener('dragend', function (event) {
+            if (event.object.position.x < -2000 || event.object.position.x > 5000 || event.object.position.z < -3500 || event.object.position.z > 5500) {
+                alert("Não pode colocar a maquina fora da fábrica! \n\nX: " + event.object.position.x + "\nY: " + event.object.position.y + "\nZ: " + event.object.position.z);
+                event.object.position.x = auxx;
+                event.object.position.y = auxy;
+                event.object.position.z = auxz;
+            }
+            controls.enabled = true;
+            event.object.material.emissive.set(0x000000);
+            event.object.position.y = -5;
+
+
+
+        });
+
+
+
+        // game logic
+        var update = function () {
+            //y,z,x
+            //(800, 800, 800)
+            cameraControl();
+
+            console.log(facasGLTF);
+
+            // create a Ray with origin at the mouse position
+            //   and direction into the scene (camera direction)
+            var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+
+            raycaster.setFromCamera(mouse, camera);
+
+            // create an array containing all objects in the scene with which the ray intersects
+            var intersects = raycaster.intersectObjects(scene.children, true);
+
+            // INTERSECTED = the object in the scene currently closest to the camera 
+            //		and intersected by the Ray projected from the mouse position 	
+            // console.log(intersects);
+
+            // if there is one (or more) intersections
+            if (intersects.length > 0) {
+
+                if (INTERSECTED != intersects[0].object) {
+                    // update text, if it has a "name" field.
+                    if (intersects[0].object.name) {
+                        context1.clearRect(0, 0, 0, 0);
+                        var message = intersects[0].object.name;
+                        var marca = intersects[0].object.marca;
+                        var modelo = intersects[0].object.modelo;
+                        var tipoMaquina = intersects[0].object.tipoMaquina;
+                        var maquinaX = intersects[0].object.maquinaX;
+                        var maquinaZ = intersects[0].object.maquinaZ;
+                    
+
+                        var varz = parseFloat(maquinaZ);
+                        var varx = parseFloat(maquinaX);
+
+                        var posicao = "X: " + (Math.trunc(intersects[0].object.position.z / 100) + varz)+" || " + "Y: " + (Math.trunc(intersects[0].object.position.x / 100) + varx);
+                        // var posicao1 = "X: " + Math.trunc(intersects[0].object.position.x) + " || " + "Y: " +Math.trunc(intersects[0].object.position.z);
+
+
+                        var metrics = context1.measureText(message);
+                        var width = metrics.width;
+                        context1.fillStyle = "rgba(0,0,0,0)"; // black border
+                        context1.fillRect(0, 0, width + 80, 125);
+                        context1.fillStyle = "rgba(232, 212, 59, 1)"; // cor do fundo
+                        context1.fillRect(2, 2, width + 40, 125);
+                        context1.fillStyle = "rgba(0,0,0,1)"; // text color
+                        context1.fillText(message, 4, 20);
+                        if (marca != null && modelo != null && tipoMaquina != null) {
+                            context1.fillText(marca, 4, 45);
+                            context1.fillText(modelo, 4, 70);
+                            context1.fillText(tipoMaquina, 4, 95);
+                            context1.fillText(posicao, 4, 120);
+                            // context1.fillText(posicao1, 4, 145);
+                        }
+                        texture1.needsUpdate = true;
+                    }
+                    else {
+                        context1.clearRect(0, 0, 300, 300);
+                        texture1.needsUpdate = true;
+                    }
+                }
+
+            }
+            else // there are no intersections
+            {
+                context1.clearRect(0, 0, 300, 300);
+                texture1.needsUpdate = true;
+            }
+
+            const delta = clock.getDelta();
+
+            for (const mixer of mixers) {
+
+                mixer.update(delta);
+
+            }
+
+            //movimento talher garfo
+            if (booleanAndarGarfo) {
+                movimentoTalherGarfo(eixoy, scalez);
+            }
+
+            //movimento talher faca
+            if (booleanAndarFacas) {
+                movimentoTalherFaca(eixoyfaca, scalezfaca);
+            }
+
+            //movimento talher faca
+            if (booleanAndarColher) {
+                movimentoTalherColher(eixoycolher, scalezcolher);
+            }
+            
+            
+            //movimento camiao
+            if (booleanCamiao) {
+                movimentoCamiao();
+            }
+
+            //pointLight.position.x += 0.1;
+        };
+
+        function onDocumentMouseMove(event) {
+            // the following line would stop any other event handler from firing
+            // (such as the mouse's TrackballControls)
+            // update sprite position
+            event.preventDefault();
+
+
+            // console.log(sprite1.position.x);
+            // console.log(sprite1.position.y);
+            // console.log(mouse.x);
+            // console.log(mouse.y);
+
+
+            // update the mouse variable
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+
+        // draw scene
+        var render = function () {
+            renderer.render(scene, camera);
+        };
+
+        var cameraControl = function () {
+            if (camera.position.y < 4) {
+                camera.position.y = 4;
+            }
+            if (camera.position.y > 700) {
+                camera.position.y = 700;
+            }
+            if (camera.position.x > 700) {
+                camera.position.x = 700;
+            }
+            if (camera.position.x < -700) {
+                camera.position.x = -700;
+            }
+            if (camera.position.z > 700) {
+                camera.position.z = 700;
+            }
+            if (camera.position.z < -700) {
+                camera.position.z = -700;
+            }
+        };
+
+
+        var c = 0, c2 = 0;
+        // run game loop ( update, render, repeat )
+        var GameLoop = function () {
+            requestAnimationFrame(GameLoop);
+            if (c == 0 && nrLinhas != null && booleanLinhas == true) {
+                c++;
+                console.log("LINHAS:" + nrLinhas);
+                /* console.log("fim HTML:" + JSON.stringify(linhasMaquinas; ))*/
+                if (nrLinhas > 1) {
+                    criarGarfoNaLinha();
+                    criarFacaNaLinha();
+                    // criarColherNaLinha();
+                    criarCaixaEspecial();
+                    //meter mais cube machines
+                    criarCubeMachine(nrLinhas);
+                    robotArm(nrLinhas);
+                    if(nrLinhas > 2){
+                        criarColherNaLinha();
+                    }
+                }
+                criarLinhaProducaoDB(nrLinhas);
+            }
+            if (c2 == 0 && flag == true && booleanMaquinas == true) {
+                c2++;
+                // console.log("C2")
+                // console.log(c2);
+                // console.log("HTML: " + linhasMaquinas);
+                // console.log("Linhas Maquinas: \n")
+                for (var b = 0; b < linhasMaquinas.length; b++) {
+                    // console.log("Linha" + [b]);
+                    for (var d = 0; d < linhasMaquinas.length; d++) {
+                        if (linhasMaquinas[b][d] != linhasMaquinas[b][0]) {
+                            if (linhasMaquinas[b][d] != null) {
+                                // console.log("Maquina" + [d]);
+                                // console.log(linhasMaquinas[b][d]);
+                                criarMaquinasDB(b, d, linhasMaquinas[b][d]);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            update();
+            render();
+        };
+
+        GameLoop();
+
+    </script>
+</body>
+
+</html>

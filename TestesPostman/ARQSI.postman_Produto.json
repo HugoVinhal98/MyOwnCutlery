@@ -1,0 +1,448 @@
+{
+	"id": "4ee8b276-3374-4420-9344-1d6a4215eaa4",
+	"name": "ARQSI",
+	"allTests": [],
+	"timestamp": "2019-10-27T00:35:40.216Z",
+	"collection_id": "a2bc4cf4-cb99-43d6-8480-b2235610542c",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "a2bc4cf4-cb99-43d6-8480-b2235610542c",
+		"name": "ARQSI",
+		"order": [
+			"52482643-3463-443d-8e55-66301bb43701",
+			"5ea70097-011c-410f-9653-24c542f088f9",
+			"1db0c9c5-78a3-4715-a900-3e2dcd870e1b",
+			"b241f4e1-93a8-4b00-b484-c2e47e3d8772",
+			"27b6ec7f-1cc9-402a-9842-f15450a1e012"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "Produto por Id não existe ainda na base de dados",
+			"id": "52482643-3463-443d-8e55-66301bb43701",
+			"url": "https://localhost:5001/api/produto/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code é 404": true
+			},
+			"testPassFailCounts": {
+				"Status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"971"
+			],
+			"allTests": [
+				{
+					"Status code é 404": true
+				}
+			],
+			"time": "971",
+			"totalRequestTime": "971",
+			"iterationResults": {}
+		},
+		{
+			"name": "Produto com id 2",
+			"id": "5ea70097-011c-410f-9653-24c542f088f9",
+			"url": "https://localhost:5001/api/produto",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code é 201": true,
+				"Body has description": true,
+				"Body has name": true,
+				"Body has planoFabrico": true,
+				"Descricao is set": true,
+				"Name is set": true
+			},
+			"testPassFailCounts": {
+				"Status code é 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has planoFabrico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Descricao is set": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is set": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"102"
+			],
+			"allTests": [
+				{
+					"Status code é 201": true,
+					"Body has description": true,
+					"Body has name": true,
+					"Body has planoFabrico": true,
+					"Descricao is set": true,
+					"Name is set": true
+				}
+			],
+			"time": "102",
+			"totalRequestTime": "102",
+			"iterationResults": {}
+		},
+		{
+			"name": "Produto com id 2 já existente",
+			"id": "1db0c9c5-78a3-4715-a900-3e2dcd870e1b",
+			"url": "https://localhost:5001/api/produto/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Body has description": true,
+				"Body has name": true,
+				"Body has planoFabrico": true,
+				"Descricao is set": true,
+				"Name is set": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has planoFabrico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Descricao is set": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is set": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"47"
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Body has description": true,
+					"Body has name": true,
+					"Body has planoFabrico": true,
+					"Descricao is set": true,
+					"Name is set": true
+				}
+			],
+			"time": "47",
+			"totalRequestTime": "47",
+			"iterationResults": {}
+		},
+		{
+			"name": "Todos os produtos",
+			"id": "b241f4e1-93a8-4b00-b484-c2e47e3d8772",
+			"url": "https://localhost:5001/api/produto",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Body has description": true,
+				"Body has name": true,
+				"Body has planoFabrico": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has planoFabrico": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"48"
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Body has description": true,
+					"Body has name": true,
+					"Body has planoFabrico": true
+				}
+			],
+			"time": "48",
+			"totalRequestTime": "48",
+			"iterationResults": {}
+		},
+		{
+			"name": "Plano de fabrico do produto com id 2",
+			"id": "27b6ec7f-1cc9-402a-9842-f15450a1e012",
+			"url": "https://localhost:5001/api/produto/2/planofabrico",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Body has description": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Body has description": true
+				}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 19,
+	"totalFail": 0,
+	"totalTime": 1180,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Produto por Id não existe ainda na base de dados",
+			"id": "52482643-3463-443d-8e55-66301bb43701",
+			"url": "https://localhost:5001/api/produto/2",
+			"time": "2019-10-27T00:35:40.216Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Produto com id 2",
+			"id": "5ea70097-011c-410f-9653-24c542f088f9",
+			"url": "https://localhost:5001/api/produto",
+			"time": "2019-10-27T00:35:40.216Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code é 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has planoFabrico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Descricao is set": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is set": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Produto com id 2 já existente",
+			"id": "1db0c9c5-78a3-4715-a900-3e2dcd870e1b",
+			"url": "https://localhost:5001/api/produto/2",
+			"time": "2019-10-27T00:35:40.216Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has planoFabrico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Descricao is set": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is set": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Todos os produtos",
+			"id": "b241f4e1-93a8-4b00-b484-c2e47e3d8772",
+			"url": "https://localhost:5001/api/produto",
+			"time": "2019-10-27T00:35:40.216Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has planoFabrico": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Plano de fabrico do produto com id 2",
+			"id": "27b6ec7f-1cc9-402a-9842-f15450a1e012",
+			"url": "https://localhost:5001/api/produto/2/planofabrico",
+			"time": "2019-10-27T00:35:40.216Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has description": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
