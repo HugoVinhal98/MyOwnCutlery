@@ -18,6 +18,6 @@
     "mockgoose": "^8.0.4",
     "mongoose": "^5.8.0",
     "morgan": "^1.9.1",
-    "vue-dynamic-dropdown": "^1.0.12"
+    "vue-dynamic-dropdown": "^1.0.51"
   }
 }
